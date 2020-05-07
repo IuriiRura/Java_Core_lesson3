@@ -1,5 +1,3 @@
-package ua.lviv.lgs;
-
 public class Application_ring {
     public static void main(String[] args) {
         Ring ring = new Ring();

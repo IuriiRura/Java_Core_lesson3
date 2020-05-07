@@ -1,4 +1,3 @@
-package ua.lviv.lgs;
 
 public class Rectangle {
     private int Lenght;

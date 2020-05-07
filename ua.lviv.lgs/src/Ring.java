@@ -1,5 +1,3 @@
-package ua.lviv.lgs;
-
 public class Ring {
     private double semidiameter;
     private double diameter;
