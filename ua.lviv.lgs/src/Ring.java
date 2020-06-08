@@ -1,4 +1,4 @@
-public class Ring {
+ public class Ring {
     private double semidiameter;
     private double diameter;
 
