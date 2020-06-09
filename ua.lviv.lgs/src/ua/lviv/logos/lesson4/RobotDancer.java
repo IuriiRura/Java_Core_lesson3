@@ -1,16 +1,22 @@
 package ua.lviv.logos.lesson4;
 
 public class RobotDancer extends Robot {
+    private String KindOfRobot;
+    private String doing;
+    RobotDancer(String KindOfRobot, String doing) {
+        super(KindOfRobot, doing);
+        this.KindOfRobot = "I am Robot Dancer";
+        this.doing = "I am Just Dancing";
+    }
 
-    //RobotDancer(String KindOfRobot, String doing) {
-    //    super(KindOfRobot, doing);
-    //}
+    @Override
+    public String toString() {
+        return  KindOfRobot + " " +  doing;
+    }
 
-
-
-        //case2
+    //case2
         @Override
-        public void work(String KindOfRobot, String doing) {
-            super.work(KindOfRobot, doing);
+        public String work () {
+            return this.KindOfRobot + " " + this.doing;
         }
     }
