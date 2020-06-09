@@ -1,21 +1,26 @@
 package ua.lviv.logos.lesson4;
 
 public class Robot {
-    private String KindOfRobot;
-    private String doing;
-    Robot (String KindOfRobot,String doing) {
-        super();
-        this.KindOfRobot = KindOfRobot;
-        this.doing = doing;
+    // case 1
+   // private String KindOfRobot;
+   //private String doing;
+   // Robot (String KindOfRobot,String doing) {
+   //     super();
+   //    this.KindOfRobot = KindOfRobot;
+    //    this.doing = doing;
 
-    }
-    public void work (String doing) {
-        System.out.println(this.KindOfRobot + this.doing);
+   // }
+
+
+    //@Override
+   // public String toString() {
+   //     return  KindOfRobot + " " +  doing;
+    //}
+
+
+            // case 2
+    public void work (String KindOfRobot, String doing) {
+        System.out.println(KindOfRobot + " " + doing);
 
     };
-
-    @Override
-    public String toString() {
-        return  KindOfRobot + " " +  doing;
-    }
 }
