@@ -15,16 +15,6 @@ public class ApplicationRobots {
         System.out.println(RobotCooker);
 
 
-                        //case2
-        //Robot Robot = new Robot();
-        //Robot.work();
-        //CoffeeRobot CoffeeRobot = new CoffeeRobot();
-        //CoffeeRobot.work();
-        //RobotDancer RobotDancer = new RobotDancer();
-        //RobotDancer.work();
-        //RobotCooker RobotCooker = new RobotCooker();
-        //RobotCooker.work();
-
 
         Robot [] RobotsArray = new Robot[4];
         RobotsArray[0] = Robot;
