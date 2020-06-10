@@ -16,8 +16,8 @@ public class Robot {
         return  KindOfRobot + " " +  doing;
     }
 
-            // case 2
-    public String work () {
-        return this.KindOfRobot + " " + this.doing;
+
+    public void work () {
+        System.out.println(KindOfRobot + " " +  doing);
     }
 }
