@@ -5,8 +5,8 @@ public class RobotDancer extends Robot {
     private String doing;
     RobotDancer(String KindOfRobot, String doing) {
         super(KindOfRobot, doing);
-        this.KindOfRobot = "I am Robot Dancer";
-        this.doing = "I am Just Dancing";
+        this.KindOfRobot = KindOfRobot ;
+        this.doing = doing;
     }
 
     @Override
@@ -14,9 +14,4 @@ public class RobotDancer extends Robot {
         return  KindOfRobot + " " +  doing;
     }
 
-    //case2
-        @Override
-        public String work () {
-            return this.KindOfRobot + " " + this.doing;
-        }
     }

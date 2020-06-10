@@ -6,21 +6,18 @@ public class Robot {
    private String doing;
     Robot (String KindOfRobot,String doing) {
        super();
-       this.KindOfRobot = "Im a Robot";
-       this.doing = "I am just working";
+        this.KindOfRobot = KindOfRobot ;
+        this.doing = doing;
 
     }
-
 
     @Override
     public String toString() {
         return  KindOfRobot + " " +  doing;
     }
 
-
             // case 2
     public String work () {
         return this.KindOfRobot + " " + this.doing;
-
-    };
+    }
 }

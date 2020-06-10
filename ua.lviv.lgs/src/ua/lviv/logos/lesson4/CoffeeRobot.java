@@ -8,8 +8,8 @@ public class CoffeeRobot extends Robot {
 
     CoffeeRobot(String KindOfRobot, String doing) {
       super(KindOfRobot, doing);
-        this.KindOfRobot = "I am Coffee Robot";
-        this.doing = "I am Making coffee";
+        this.KindOfRobot = KindOfRobot ;
+        this.doing = doing;
 
     }
     @Override
@@ -17,10 +17,5 @@ public class CoffeeRobot extends Robot {
         return  KindOfRobot + " " +  doing;
     }
 
-                //case2
-    @Override
-    public String work () {
-        return this.KindOfRobot + " " + this.doing;
-    }
 }
 
