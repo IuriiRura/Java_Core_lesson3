@@ -1,4 +1,4 @@
-package ua.lviv.logos.lesson4.Pet;
+package lesson5.Pet;
 
 public class Cat extends Pet {
     @Override

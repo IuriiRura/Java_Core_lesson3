@@ -1,4 +1,4 @@
-package ua.lviv.logos.lesson4.Amphibia;
+package lesson5.Amphibia;
 
 public class Amphibia {
     void eat () {

@@ -1,6 +1,4 @@
-package ua.lviv.logos.lesson4.Amphibia;
-
-import javafx.scene.AmbientLight;
+package lesson5.Amphibia;
 
 public class Main {
 

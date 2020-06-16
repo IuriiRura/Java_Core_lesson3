@@ -1,4 +1,4 @@
-package Demo;
+package lesson5;
 
 public class User {
     int id;
