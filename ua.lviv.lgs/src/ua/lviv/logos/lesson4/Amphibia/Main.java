@@ -9,8 +9,8 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Frog frog =  new Frog();
-        Amphibia frogg = new Amphibia();
+        Amphibia frog =  new Frog();
+
 
 
         frog.eat();
