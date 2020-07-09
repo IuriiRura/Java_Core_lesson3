@@ -7,5 +7,9 @@ public class Application {
         calc.multipy();
         calc.sum();
         calc.minus();
+
+        for (String arg : args) {
+            
+        }
     }
 }
