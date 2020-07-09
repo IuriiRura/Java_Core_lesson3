@@ -1,6 +1,6 @@
 package lesson7;
 
-public class CУ27 extends Plane implements Stealth, Turbo, NuclearStrike {
+public class CУ27 extends Plane implements SpecialAbilities {
     private static PlaneControl plane = new PlaneControl();
 
     private String colour;
