@@ -3,7 +3,7 @@ public class Application_ring {
         Ring ring = new Ring();
         ring.setDiameter(45.8);
         ring.setSemidiameter(22.9);
-        ring.Lenght();
+        ring.Length();
         ring.square();
 
     }

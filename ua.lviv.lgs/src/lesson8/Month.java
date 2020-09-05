@@ -1,10 +1,19 @@
+/*
+ *Logos It academy HomeTask file
+ */
+
 package lesson8;
-
+/*
+since Java 1.8
+author Rura Iurii
+version 1.1
+ */
 import java.util.Scanner;
-
+/* This is enum*/
 enum Seasons { WINTER, SPRING, SUMMER, AUTUMN
 }
 
+/* This is enum*/
 public enum Month {
     JANUARY(31, Seasons.WINTER), FEBRUARY(28, Seasons.WINTER),
     MARCH(31, Seasons.SPRING), APRIL(30, Seasons.SPRING), MAY(31, Seasons.SPRING),
@@ -15,12 +24,12 @@ public enum Month {
     int days;
 
     Seasons season;
-
+/*This is constructor*/
     Month(int days, Seasons season) {
         this.days = days;
         this.season = season;
     }
-
+/*This is getters*/
     public int getDays() {
         return days;
     }
@@ -29,25 +38,31 @@ public enum Month {
         return season;
     }
 
-
+/*This is Console menu parameters*/
     static void menu() {
         System.out.println("Press 1 to Check month exists");
-        System.out.println("Press 2 to see all monthes in choosen season ");
-        System.out.println("Press 3 to see monthes with entered amount of days");
-        System.out.println("Press 4 to see monthes with less days");
-        System.out.println("Press 5 to see monthes with more days");
+        System.out.println("Press 2 to see all months in chosen season ");
+        System.out.println("Press 3 to see months with entered amount of days");
+        System.out.println("Press 4 to see months with less days");
+        System.out.println("Press 5 to see months with more days");
         System.out.println("Press 6 to see next season");
         System.out.println("Press 7 to see previous season");
-        System.out.println("Press 8 to see monthes with pair amount of days");
-        System.out.println("Press 9 to see monthes with unmatched amount of days");
+        System.out.println("Press 8 to see months with pair amount of days");
+        System.out.println("Press 9 to see months with unmatched amount of days");
         System.out.println("Press 10 to check parity of days in entered month");
     }
 
-
-    public static void main(String[] args) {
+/*
+* @exception WrongInputConsoleParametersException,
+* author Iurii
+* return null
+* see Java Convention
+* */
+    public static void main(String[] args) throws WrongInputConsoleParametersException {
+        /*Scanner*/
         Month[] mas = Month.values();
         Scanner sc = new Scanner(System.in);
-
+/*this is cycle in cycle*/
         while (true) {
             menu();
 
@@ -64,10 +79,13 @@ public enum Month {
                         }
                     }
                     if (!flag) {
-                        System.out.println("This month does not exists");
+                     String message = "This month does not exists";
+                     throw new WrongInputConsoleParametersException(message);
+
+
                     }
-                    break;
                 }
+                break;
                 case "2": {
                     System.out.println("Enter season's name");
                     Scanner sc3 = new Scanner(System.in);
@@ -81,7 +99,8 @@ public enum Month {
 
                     }
                     if (flag) {
-                        //Seasons s = Seasons.valueOf(seasonSc); ??
+
+
                         for (Month m : mas) {
                             if (m.getSeason().name().equals(seasonSc)) {
                                 System.out.println(m);
@@ -90,12 +109,16 @@ public enum Month {
                         }
                     }
                     if (!flag) {
-                        System.out.println("Month does not exists");
+                        String message = "This season does not exists";
+                        throw new WrongInputConsoleParametersException(message);
+
+
+
                     }
-                    break;
                 }
+                break;
                 case "3": {
-                    System.out.println("Enter amount of days to see mounthes with same amount of days");
+                    System.out.println("Enter amount of days to see months with same amount of days");
                     Scanner sc4 = new Scanner(System.in);
                     int daysSc = sc4.nextInt();
                     boolean flag = false;
@@ -114,7 +137,10 @@ public enum Month {
                         }
                     }
                     if (!flag) {
-                        System.out.println("There is no Monthes with entered amount of days");
+                        String message = "You have entered wrong amount of days";
+                        throw new WrongInputConsoleParametersException(message);
+
+
                     }
                 }
                 case "4": {
@@ -124,6 +150,7 @@ public enum Month {
                         }
                     }
                 }
+                break;
                 case "5": {
                     for (Month m : mas) {
                         if (m.getDays() > (30)) {
@@ -134,6 +161,7 @@ public enum Month {
 
 
                 }
+                break;
                 case "6": {
                     System.out.println("Enter name of a season");
                     Scanner sc5 = new Scanner(System.in);
@@ -171,8 +199,10 @@ public enum Month {
 
                     }
                     if (!flag) {
-                        System.out.println("Enter one of the following season:" +
-                                " winter, spring, summer, autumn");
+                    String message = "Entered season does not exist, please enter one of the following season:" +
+                            " winter, spring, summer, autumn";
+                    throw new WrongInputConsoleParametersException(message);
+
                     }
 
 
@@ -214,8 +244,11 @@ public enum Month {
 
                     }
                     if (!flag) {
-                        System.out.println("Enter one of the following season:" +
-                                " winter, spring, summer, autumn");
+                        String message = "Entered season does not exist, please enter one of the following season:" +
+                                " winter, spring, summer, autumn";
+                        throw new WrongInputConsoleParametersException(message);
+
+
                     }
 
                 }
@@ -260,11 +293,14 @@ public enum Month {
                         }
                     }
                     if (!flag) {
-                        System.out.println("Entered month does not exist");
+                        String message = "Entered month does not exist!";
+                        throw new WrongInputConsoleParametersException(message);
+
+
                     }
                 }
-
             }
+            break;
 
         }
 

@@ -13,8 +13,8 @@
     public void square () {
         System.out.println("Ring's square = " + (3.14 * ((diameter)/2) * ((diameter)/2)));
     }
-    public void Lenght () {
-        System.out.println("Ring's Lenght = " + 2 * 3.14 * semidiameter);
+    public void Length () {
+        System.out.println("Ring's Length = " + 2 * 3.14 * semidiameter);
     }
 
     public double getSemidiameter() {
